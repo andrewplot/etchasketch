@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>16x16 Grid</title>
-  <link rel="stylesheet" href="style.css">
-
-
+  <meta charset="UTF-8" />
+  <title>🖌️ Etch-a-Sketch</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Etch-a-Sketch</h1>
+  </header>
 
+  <!-- The responsive drawing grid -->
   <div id="container"></div>
+
+  <!-- Controls: color picker, eraser, clear -->
+  <div class="controls">
+    <div class="color-control">
+      <label for="colorPicker">Color:</label>
+      <input type="color" id="colorPicker" value="#000000" />
+    </div>
+    <button id="eraserButton">Eraser</button>
+    <button id="clearButton">Clear</button>
+  </div>
+
+  <!-- Slider for N×N grid size, plus current-size display -->
+  <div class="slidecontainer">
+    <input
+      type="range"
+      min="1"
+      max="64"
+      value="16"
+      class="slider"
+      id="myRange"
+    />
+    <p id="sizeDisplay">Grid Size: 16 × 16</p>
+  </div>
+
+  <!-- Footer/Copyright -->
+  <footer>
+    <p style="color: darkslategray">
+      Copyright © 2025 andrewplot
+      <a href="https://github.com/andrewplot" target="_blank" class="github-link">
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          alt="GitHub"
+          class="github-icon"
+        />
+      </a>
+    </p>
+  </footer>
+
   <script src="script.js"></script>
-  
 </body>
 </html>
